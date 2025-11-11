@@ -2,3 +2,8 @@ export { Navigation } from './navigation';
 export { ContentCard } from './content-card';
 export { ProductCard } from './product-card';
 export { ChatWidget } from './chat-widget';
+export { HeroSection } from './hero-section';
+export { FeaturesSection } from './features-section';
+export { TestimonialsSection } from './testimonials-section';
+export { NewsletterSection } from './newsletter-section';
+export { Footer } from './footer';

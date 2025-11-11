@@ -2,6 +2,11 @@ import { Navigation } from '@/components/creative-harbor/navigation';
 import { ContentCard } from '@/components/creative-harbor/content-card';
 import { ProductCard } from '@/components/creative-harbor/product-card';
 import { ChatWidget } from '@/components/creative-harbor/chat-widget';
+import { HeroSection } from '@/components/creative-harbor/hero-section';
+import { FeaturesSection } from '@/components/creative-harbor/features-section';
+import { TestimonialsSection } from '@/components/creative-harbor/testimonials-section';
+import { NewsletterSection } from '@/components/creative-harbor/newsletter-section';
+import { Footer } from '@/components/creative-harbor/footer';
 import { mockContentItems, mockBlogPosts, mockProducts, mockChatMessages } from '@/lib/mock-data/content';
 import { Play, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -15,8 +20,11 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
+      {/* Hero Section */}
+      <HeroSection />
+
       {/* Main Content */}
-      <main className="pt-[60px]">
+      <main>
         <div className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
             {/* Left Column - Main Content */}
@@ -138,7 +146,19 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+        {/* Features Section */}
+        <FeaturesSection />
+
+        {/* Testimonials Section */}
+        <TestimonialsSection />
+
+        {/* Newsletter Section */}
+        <NewsletterSection />
       </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
