@@ -301,10 +301,17 @@ button {
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
+  /* Reset background to allow proper button styling */
   background: none;
-  padding: 0;
   color: inherit;
+  line-height: 1.5;
+  /* Default padding - ensures text has breathing room from borders/backgrounds */
+  /* This is a sensible default that prevents text from touching button edges */
+  padding: 0.5rem 0.75rem; /* 8px 12px - minimal comfortable default */
 }
+
+/* Buttons with explicit Tailwind padding classes override this default */
+/* Tailwind utilities have higher specificity and will take precedence */
 
 button:disabled {
   opacity: 0.5;
