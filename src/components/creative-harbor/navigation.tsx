@@ -10,7 +10,7 @@ export function Navigation() {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-        <div className="container mx-auto px-4 md:px-6 h-[60px] flex items-center justify-between">
+        <div className="container mx-auto px-4 md:px-6 h-[64px] flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
@@ -77,8 +77,8 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] z-40 bg-background/98 backdrop-blur md:hidden">
-          <div className="container mx-auto px-4 py-6 space-y-4">
+        <div className="fixed inset-0 top-[64px] z-40 bg-background/98 backdrop-blur md:hidden">
+          <div className="container mx-auto px-4 py-8 space-y-2">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}

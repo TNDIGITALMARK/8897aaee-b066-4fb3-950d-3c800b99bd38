@@ -6,80 +6,80 @@ import Image from 'next/image';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20">
+    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-muted/20 pt-16 md:pt-20">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-8 text-center lg:text-left"
           >
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mx-auto lg:mx-0"
             >
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Welcome to Creative Harbor</span>
             </motion.div>
 
             {/* Main Headline */}
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
                 Where <span className="text-gradient">Creativity</span>
                 <br />
                 Meets Community
               </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground max-w-xl">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 Discover exclusive music, art, books, and merchandise from a multi-talented creator.
                 Join our vibrant community and explore a world of creative excellence.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group px-8 py-4 rounded-lg gradient-primary text-white font-semibold shadow-button hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button className="group px-8 py-4 rounded-xl gradient-primary text-white font-semibold shadow-button hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
                 Explore Content
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="px-8 py-4 rounded-lg bg-card border border-border text-foreground font-semibold hover:bg-muted transition-all duration-300">
+              <button className="px-8 py-4 rounded-xl bg-card border border-border text-foreground font-semibold hover:bg-muted transition-all duration-300">
                 Join Community
               </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
+            <div className="grid grid-cols-3 gap-6 pt-10 border-t border-border max-w-lg mx-auto lg:mx-0">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <TrendingUp className="w-4 h-4 text-primary" />
-                  <p className="text-2xl font-bold text-foreground">50K+</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">50K+</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Total Views</p>
+                <p className="text-xs md:text-sm text-muted-foreground">Total Views</p>
               </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <Users className="w-4 h-4 text-secondary" />
-                  <p className="text-2xl font-bold text-foreground">10K+</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">10K+</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Community</p>
+                <p className="text-xs md:text-sm text-muted-foreground">Community</p>
               </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 justify-center lg:justify-start">
                   <Sparkles className="w-4 h-4 text-accent" />
-                  <p className="text-2xl font-bold text-foreground">200+</p>
+                  <p className="text-2xl md:text-3xl font-bold text-foreground">200+</p>
                 </div>
-                <p className="text-sm text-muted-foreground">Creations</p>
+                <p className="text-xs md:text-sm text-muted-foreground">Creations</p>
               </div>
             </div>
           </motion.div>

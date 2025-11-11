@@ -14,7 +14,7 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
